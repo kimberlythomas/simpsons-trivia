@@ -45,6 +45,8 @@ GIF created with ...
 
 ## Notes
 
+Describe any challenges encountered while building the app.
+
 When clicking "Next" for a new card, the answer was briefly flashing on the screen before the question. I was able to solve this by adding a 0.5 second delay before the next question displays.
 
 ## License
