@@ -1,26 +1,26 @@
-# Web Development Project 2 - _Simpsons Trivia_
+# Web Development Project 3 - _Simpsons Trivia_
 
 Submitted by: **Kimberly Thomas**
 
-This web app: **A React web app of trivia questions about the TV show The Simpsons, displayed in a flashcard format. Click the card to flip back and forth between the question and answer. Click the "Next" button for a new random card.**
+This web app: **A React web app of trivia questions about the TV show The Simpsons, displayed in a flashcard format. Enter your answer in the box and click "Submit." The answer will be revealed along with a "Woohoo!" Homer for a correct answer or a "D'oh!" Homer for an incorrect answer. Previous and next buttons allow for navigation through the flashcards.**
 
-Time spent: **7** hours spent in total
+Time spent: **6** hours spent in total
 
 ## Required Features
 
 The following **required** functionality is completed:
 
-- [x] **The title of the card set and some information about it, such as a short description and the total number of cards are displayed**
-- [x] **A single card at a time is displayed, only showing one of the components of the information pair**
-- [x] **A list of card pairs is created**
-- [x] **Clicking on the card shows the corresponding component of the information pair**
-- [x] **Clicking the next button displays a random new card**
+- [x] **The user can enter their guess in a box before seeing the flipside of the card**
+- [x] **Clicking on a submit button shows visual feedback about whether the answer was correct or incorrect**
+- [x] **A back button is displayed on the card and can be used to return to the previous card in a set sequence**
+- [x] **A next button is displayed on the card and can be used to navigate to the next card in a set sequence**
 
 The following **optional** features are implemented:
 
-- [ ] Cards contains images in addition to or in place of text
-- [ ] Cards have different visual styles such as color based on their category
-  - [ ] _visual style implemented_
+- [ ] A shuffle button is used to randomize the order of the cards
+- [ ] A user's answer may be counted as correct even when it is slightly different from the target answer
+- [ ] A counter displays the user's current and longest streak of correct responses
+- [ ] A user can mark a card that they have mastered and have it removed from the pool of answers as well as added to a list of mastered cards
 
 The following **additional** features are implemented:
 
@@ -28,7 +28,7 @@ The following **additional** features are implemented:
 
 ## Video Walkthrough
 
-Here's a walkthrough of implemented required features:
+Here's a walkthrough of implemented user stories:
 
 <img src='https://raw.githubusercontent.com/kimberlythomas/simpsons-trivia/main/src/assets/walkthrough.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
 
@@ -46,8 +46,6 @@ GIF created with ...
 ## Notes
 
 Describe any challenges encountered while building the app.
-
-When clicking "Next" for a new card, the answer was briefly flashing on the screen before the question. I was able to solve this by adding a 0.5 second delay before the next question displays.
 
 ## License
 

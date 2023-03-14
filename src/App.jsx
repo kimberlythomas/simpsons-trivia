@@ -1,5 +1,5 @@
-import React from 'react';
-import './App.css';
+import React from "react";
+import "./App.css";
 import CardListComponent from "./components/CardList";
 
 const cards = [
@@ -40,27 +40,23 @@ const cards = [
     answer: "Homer Jay Simpson",
   },
   {
-    question: "What's the name of the retirement home where Homer's father, Abraham Simpson, lives?",
+    question:
+      "What's the name of the retirement home where Homer's father, Abraham Simpson, lives?",
     answer: "Springfield Retirement Castle",
   },
-
-
 ];
 
-
-
 const App = () => {
-
   return (
     <div className="App">
       <div className="header">
-          <h1>Simpsons Trivia</h1>
-          <h2>Test Your Knowledge of The Simpsons</h2>
-          <p>Total number of flashcards: {cards.length}</p>
-        </div>
+        <h1>Simpsons Trivia</h1>
+        <h2>Test Your Knowledge of The Simpsons</h2>
+        <p>Total number of flashcards: {cards.length}</p>
+      </div>
       <CardListComponent cards={cards} />
     </div>
   );
-}
+};
 
 export default App;

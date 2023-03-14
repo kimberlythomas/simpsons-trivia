@@ -1,36 +1,28 @@
-import React from 'react';
+import React from "react";
 import { useState } from "react";
 import CardComponent from "./Card";
 
-
 const CardListComponent = ({ cards }) => {
-    const [currentCardIndex, setCurrentCardIndex] = useState(
-      Math.floor(Math.random() * cards.length)
-    );
-    const [showAnswer, setShowAnswer] = useState(false);
-  
-    const handleNextButtonClick = () => {
-      setShowAnswer(false); // reset showAnswer to false
-      setTimeout(() => {
-        setCurrentCardIndex(Math.floor(Math.random() * cards.length));
-      }, 500); // delay showing next question by 0.5 second so the answer doesn't flash before the question loads
-      
-    };
+  const [currentIndex, setCurrentIndex] = useState(0);
 
-    return (
-      <div>
-        <CardComponent
-          question={cards[currentCardIndex].question}
-          answer={cards[currentCardIndex].answer}
-          showAnswer={showAnswer}
-          onCardClick={() => setShowAnswer(!showAnswer)}
-        />
-        <button className="btn btn-primary" onClick={handleNextButtonClick}>
-          Next
-        </button>
-      </div>
-    );
+  const handleNextClick = () => {
+    setCurrentIndex((currentIndex + 1) % cards.length);
   };
 
-  export default CardListComponent;
-  
+  const handlePrevClick = () => {
+    setCurrentIndex((currentIndex - 1 + cards.length) % cards.length);
+  };
+
+  return (
+    <div className="card-list">
+      <CardComponent
+        question={cards[currentIndex].question}
+        answer={cards[currentIndex].answer}
+        onNextClick={handleNextClick}
+        onPrevClick={handlePrevClick}
+      />
+    </div>
+  );
+};
+
+export default CardListComponent;

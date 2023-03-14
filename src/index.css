@@ -65,5 +65,7 @@ button:focus-visible {
   }
   button {
     background-color: #ffd90f;
+    margin-left: 10px;
+    margin-bottom: 10px;
   }
 }
